@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+$styleVersion: 4.3;
+@import '~@spartacus/styles/index';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  --cx-page-width-max: 1600px;
+  //--cx-color-primary: #174aab;
+}
+
+header {
+  // --cx-color-dark: #db232a;
+}
+
+%header {
+  @media (min-width: 576px) {
+    .SiteLogo {
+      width: 228px;
+    }
+  }
+}
+
+.searchbox {
+  --cx-color-secondary: #fff;
+}
+
+%cx-searchbox {
+  color: #000;
+}

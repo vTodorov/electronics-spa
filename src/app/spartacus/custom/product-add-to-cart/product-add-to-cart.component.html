@@ -1,0 +1,41 @@
+<ng-container *ngIf="product$ | async as product">
+
+  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+
+    <div class="prices-wrapper">
+      <div class="d-flex flex-column">
+        <div class="old-price">
+          <custom-price [price]="300"></custom-price>
+          <span class="iso">{{product.price?.currencyIso}}</span>
+        </div>
+        <div class="price-label">Old price</div>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="price">
+          <custom-price [price]="product.price?.value"></custom-price>
+          <span class="iso">{{product.price?.currencyIso}}</span>
+        </div>
+        <div class="price-label">Price</div>
+      </div>
+    </div>
+
+    <button
+      *ngIf="product.code"
+      class="add-to-cart-btn mt-3 mt-sm-0"
+      type="button"
+      (click)="addToCart()">
+      Add to cart
+    </button>
+  </div>
+
+  <div class="actions-wrapper">
+    <div class="action reserve">Reserve and buy from store</div>
+    <div class="action change">Alert me for change</div>
+    <div class="action compare">Compare</div>
+    <div class="action favorites"
+         *ngIf="product.code && wishListService"
+         (click)="wishListService.addEntry(product.code)">Add to favorites
+    </div>
+  </div>
+
+</ng-container>

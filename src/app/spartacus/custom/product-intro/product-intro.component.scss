@@ -1,0 +1,135 @@
+.badge {
+  display: inline-block;
+  background-color: #72c501;
+  color: #fff;
+  padding: 4px 11px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.product-name {
+  font-size: 30px;
+  color: #000;
+  margin-top: 15px;
+}
+
+.product-code, .stock-status {
+  font-size: 14px;
+}
+
+.product-status-wrapper {
+  display: flex;
+  align-items: end;
+  margin-top: 50px;
+}
+
+.stock-status {
+  padding-left: 20px;
+  position: relative;
+
+  &:before {
+    content: "";
+    top: calc(50% - 2px);
+    left: 8px;
+    position: absolute;
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #DB232A;
+    border-radius: 50%;
+  }
+}
+
+.shipping {
+  position: relative;
+  padding-left: 35px;
+  margin-left: auto;
+
+  &:before {
+    content: '';
+    height: 23px;
+    width: 28px;
+    position: absolute;
+    left: 0;
+    background: url('https://www.technopolis.bg/_ui/desktop/site-technopolis-bg/images/layout/ui.svg') no-repeat -58px -558px;
+  }
+}
+
+.product-leasing {
+  min-height: 48px;
+  position: relative;
+  padding-left: 46px;
+  font-size: 15px;
+  line-height: 1.125;
+  border: 2px solid #f4c844;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 26px 0;
+
+  &:before {
+    content: '';
+    width: 46px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #f4c844;
+    z-index: 1;
+  }
+
+  &:after {
+    content: '';
+    height: 17px;
+    width: 26px;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -8px;
+    background: url('https://www.technopolis.bg/_ui/desktop/site-technopolis-bg/images/layout/ui.svg') no-repeat -46px -183px;
+    z-index: 2;
+  }
+}
+
+.leasing-info {
+  padding-right: 40px;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  color: #DB232A;
+
+  &:after {
+    content: ' ';
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -13px;
+    background: url('https://www.technopolis.bg/_ui/desktop/site-technopolis-bg/images/layout/ui.svg') no-repeat -275px 0;
+  }
+}
+
+.leasing-info, .text {
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .leasing-info {
+    margin-top: 0;
+  }
+  .product-status-wrapper {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  :host{
+    padding-top: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .shipping {
+    margin: 5px 0 0 0;
+  }
+}

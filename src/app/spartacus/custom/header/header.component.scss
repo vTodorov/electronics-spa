@@ -1,0 +1,31 @@
+@import "../../../../../node_modules/@spartacus/styles/scss/cxbase/mixins";
+
+@import "../../../../../node_modules/@spartacus/styles/scss/components/product/details/product-intro";
+@import "../../../../../node_modules/@spartacus/styles/scss/components/layout/header/header";
+
+.logo {
+  svg {
+    max-width: 100%;
+    height: auto;
+    fill: white;
+  }
+
+  .logo-mobile {
+    display: none;
+    width: 34px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 576px) {
+    .logo-desktop {
+      display: none;
+    }
+    .logo-mobile {
+      display: block;
+    }
+  }
+}

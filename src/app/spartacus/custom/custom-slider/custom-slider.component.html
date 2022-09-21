@@ -1,0 +1,40 @@
+<ng-template cxOutletRef="Section1">
+
+  <swiper
+    [pagination]="true"
+    [navigation]="true"
+    [autoplay]="{
+      delay: 2500,
+      disableOnInteraction: false
+    }"
+  >
+    <ng-template swiperSlide>
+      <cx-media [container]="getImage(data)"></cx-media>
+    </ng-template
+    >
+    <ng-template swiperSlide>
+      <img srcset="https://www.technopolis.bg/medias/sys_master/hf1/ha8/28140243320862.jpg">
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 3
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 4
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 5
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 6
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 7
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 8
+    </ng-template
+    >
+    <ng-template swiperSlide>Slide 9</ng-template>
+  </swiper>
+
+</ng-template>

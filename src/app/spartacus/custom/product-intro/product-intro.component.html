@@ -1,0 +1,21 @@
+<ng-container *ngIf="product$ | async as product">
+  <span class="badge">save -20%</span>
+  <h1 class="product-name">
+    {{product.name}}
+  </h1>
+
+  <div class="product-status-wrapper">
+    <span class="product-code">No: {{product.code}}</span>
+    <span class="stock-status">{{product?.stock?.stockLevelStatus}}</span>
+
+    <span class="shipping">Free shipping</span>
+  </div>
+
+  <div class="product-leasing">
+    <div class="text">This product can be purchased on credit online</div>
+    <a href="#" class="leasing-info">
+      <span>See credit plans</span>
+    </a>
+  </div>
+
+</ng-container>
